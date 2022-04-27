@@ -2,20 +2,34 @@
   text-align: center;
 }
 
+.appMobile {
+  text-align: center;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 55vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.regisHeader {
+  background-color: #d31145;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-bottom: white;
+  border-bottom-width: 2px;
+  padding: 2vh 10vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.regisLogo {
+  height: 8vmin;
+  pointer-events: none;
+}
+
+.appHeader {
+  background-color: #bb0b3a;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +38,31 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.earthDiv {
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleTextDiv {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+.innerTextDiv {
+  text-align: left;
+  margin: 10%;
+}
+
+.titleText {
+  font-size: 36px;
+}
+
+.subTitleText {
+  font-size: 24px;
+}
+
+.App-link {
+  color: #61dafb;
 }
