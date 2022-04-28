@@ -4,11 +4,20 @@
 
 .appMobile {
   text-align: center;
+  height: 100vh;
 }
+
 
 .App-logo {
   height: 55vmin;
   pointer-events: none;
+}
+
+.mobileAppLogo {
+  height: 75vmin;
+  pointer-events: none;
+  margin: 5vw;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
 }
 
 .regisHeader {
@@ -22,31 +31,52 @@
   padding: 2vh 10vw;
 }
 
+.mobileHeader {
+  background-color: #d31145;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-bottom-style: groove;
+  border-bottom: white;
+  border-bottom-width: 10px;
+  padding: 2vh 10vw;
+  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
+}
+
+.mobileNavBar {
+  background-color: #d31145;
+}
+
 .regisLogo {
   height: 8vmin;
   pointer-events: none;
 }
 
+.mobileRegisLogo {
+  height: 7vh;
+  pointer-events: none;
+  margin: auto;
+}
+
 .appHeader {
-  background-color: #bb0b3a;
-  min-height: 65vh;
+  background-color: #EFEFEF;
+  height: 89%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .earthDiv {
   text-align: center;
   width: 100%;
-  height: 100%;
 }
 
 .titleTextDiv {
   width: 100%;
-  height: 100%;
   align-content: center;
 }
 
@@ -55,8 +85,29 @@
   margin: 10%;
 }
 
+.pledgeButton {
+  font-size: 20px;
+  color: white;
+  background-color: #d31145;
+  padding: 10px 20px;
+  border-radius: 360px;
+}
+
+.buttons {
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+}
+
+.shareButtons {
+  margin-top: 20px;
+}
+
+.shareButton {
+  margin: 0px 3px;
+}
+
 .titleText {
   font-size: 36px;
+  text-align: center;
 }
 
 .subTitleText {
