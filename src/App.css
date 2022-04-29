@@ -14,7 +14,7 @@
 }
 
 .mobileAppLogo {
-  height: 75vmin;
+  height: 75vw;
   pointer-events: none;
   margin: 5vw;
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));

@@ -1,12 +1,21 @@
-import earth from './globe.png';
-import regis from './Wordmark.png';
 import './App.css';
 import MobilePledge from "./components/MobilePledge";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
-import {red} from "@mui/material/colors";
+import {useEffect, useState} from "react";
 
 
 function App() {
+
+    const[width, setWidth] = useState(0);
+    const[height, setHeight] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener("resize", ev => {
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        })
+    }, [])
+
     const theme = createTheme({
         palette: {
             primary: {
@@ -15,7 +24,7 @@ function App() {
         }
     })
 
-    if(window.innerHeight > window.innerWidth) {
+    if(width < height) {
         return(
             <ThemeProvider theme={theme}>
                 <MobilePledge/>

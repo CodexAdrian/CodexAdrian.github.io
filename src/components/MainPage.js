@@ -36,7 +36,7 @@ const MainPage = ({ prevStep, nextStep, handleChange, values}) => {
                 </div>
                 <div className="titleTextDiv">
                     <div className="innerTextDiv">
-                        <Typography fontSize={"xx-large"} sx={{fontWeight:"bold"}}>
+                        <Typography variant={"h4"}>
                             Cool-16 Pledge!
                         </Typography>
                         <Typography>
