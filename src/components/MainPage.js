@@ -9,7 +9,7 @@ import {
     WhatsappShareButton
 } from "react-share";
 import RegisHeader from "./RegisHeader";
-import {Button} from "@mui/material";
+import {Button, Typography} from "@mui/material";
 
 
 const MainPage = ({ prevStep, nextStep, handleChange, values}) => {
@@ -36,13 +36,17 @@ const MainPage = ({ prevStep, nextStep, handleChange, values}) => {
                 </div>
                 <div className="titleTextDiv">
                     <div className="innerTextDiv">
-                        <p className="titleText"><strong>Cool-16 Pledge!</strong></p>
-                        <p>Pledging to the Cool 16 pledge mobile</p>
+                        <Typography fontSize={"xx-large"} sx={{fontWeight:"bold"}}>
+                            Cool-16 Pledge!
+                        </Typography>
+                        <Typography>
+                            Take the Cool 16 Pledge to help protect our environment
+                        </Typography>
                     </div>
                 </div>
                 <div className="buttons">
 
-                    <Button variant="contained" onClick={Continue} size="lg">Take the Pledge</Button>
+                    <Button variant="contained" onClick={Continue} size="large">Take the Pledge</Button>
                     <div className="shareButtons">
                         <TwitterShareButton className="shareButton" url={"https://regis.org"}><TwitterIcon size={48} round={true}/></TwitterShareButton>
                         <FacebookShareButton className="shareButton" url={"https://regis.org"}><FacebookIcon size={48} round={true}/></FacebookShareButton>

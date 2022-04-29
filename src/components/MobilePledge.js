@@ -11,7 +11,7 @@ import {
 } from "react-share";
 import MainPage from "./MainPage";
 import UserDetails from "./UserDetails";
-import TierPage from "./TierPage";
+import TierOnePage from "./TierOnePage";
 
 export default class MobilePledge extends Component {
 
@@ -33,6 +33,11 @@ export default class MobilePledge extends Component {
     nextStep = () => {
         const { step } = this.state;
         this.setState({ step: step + 1 });
+    }
+
+    incrementPledgeLevel = () => {
+        const { pledgeLevel } = this.state;
+        this.setState({ pledgeLevel: pledgeLevel + 1 });
     }
 
     handleChange = input => e => {
@@ -62,11 +67,10 @@ export default class MobilePledge extends Component {
                 />
             )
             case 3: return (
-                <TierPage
+                <TierOnePage
                     prevStep={ this.prevStep }
                     nextStep={ this.nextStep }
-                    handleChange={ this.handleChange }
-                    values={ values }
+                    incrementPledgeLevel={ this.incrementPledgeLevel }
                 />
             )
             default: return(
