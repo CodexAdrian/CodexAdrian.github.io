@@ -23,20 +23,12 @@ function App() {
             },
         }
     })
-
-    if(width < height) {
-        return(
-            <ThemeProvider theme={theme}>
-                <MobilePledge/>
-            </ThemeProvider>
-        );
-    } else {
-        return(
-            <div className="App">
-
-            </div>
-        );
-    }
+    //TODO Revert back to if statement later
+    return(
+        <ThemeProvider theme={theme}>
+            <MobilePledge/>
+        </ThemeProvider>
+    );
 }
 
 export default App;
