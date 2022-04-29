@@ -4,7 +4,7 @@ import {TextField} from "@material-ui/core";
 import {Fab, ThemeProvider, Zoom} from "@mui/material";
 import {Next} from "react-bootstrap/PageItem";
 
-const UserDetails = (nextStep, handleChange, values) => {
+const UserDetails = ({nextStep, handleChange, values}) => {
     const Continue = e => {
         e.preventDefault();
         nextStep();

@@ -18,7 +18,7 @@ jobs:
       - name: Install npm Libraries
         run: npm install
       - name: Build Site
-        run: npm run build
+        run: CI=false npm run build
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:

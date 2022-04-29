@@ -11,6 +11,7 @@ import {
 } from "react-share";
 import MainPage from "./MainPage";
 import UserDetails from "./UserDetails";
+import TierPage from "./TierPage";
 
 export default class MobilePledge extends Component {
 
@@ -48,23 +49,31 @@ export default class MobilePledge extends Component {
         switch (step) {
             case 1: return(
                 <MainPage
-                    nextStep = { this.nextStep }
-                    handleChange = { this.handleChange }
-                    values = { values }
+                    nextStep={ this.nextStep }
+                    handleChange={ this.handleChange }
+                    values={ values }
                 />
             )
             case 2: return (
                 <UserDetails
-                    nextStep = { this.nextStep }
-                    handleChange = { this.handleChange }
-                    values = { values }
+                    nextStep={ this.nextStep }
+                    handleChange={ this.handleChange }
+                    values={ values }
+                />
+            )
+            case 3: return (
+                <TierPage
+                    prevStep={ this.prevStep }
+                    nextStep={ this.nextStep }
+                    handleChange={ this.handleChange }
+                    values={ values }
                 />
             )
             default: return(
                 <MainPage
-                    prevStep = { this.prevStep }
-                    nextStep = { this.nextStep }
-                    handleChange = { this.handleChange }
+                    prevStep={ this.prevStep }
+                    nextStep={ this.nextStep }
+                    handleChange={ this.handleChange }
                 />
             )
         }
