@@ -1,0 +1,41 @@
+name: Build and Deploy Site
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build React Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.15.0'
+      - name: Install npm Libraries
+        run: npm install
+      - name: Build Site
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-files
+          path: ./build
+  deploy:
+    name: Deploy React Site
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-files
+          path: ./build
+      - name: Deploy to GH Pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secret.GITHUB_TOKEN}}
+          publish_dir: ./build

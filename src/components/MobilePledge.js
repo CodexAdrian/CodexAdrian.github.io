@@ -12,7 +12,7 @@ import {
 import MainPage from "./MainPage";
 import UserDetails from "./UserDetails";
 
-export default class Pledge extends Component {
+export default class MobilePledge extends Component {
 
     state = {
         step: 1,
@@ -56,9 +56,9 @@ export default class Pledge extends Component {
             )
             case 2: return (
                 <UserDetails
-                    prevStep = { this.prevStep }
                     nextStep = { this.nextStep }
                     handleChange = { this.handleChange }
+                    values = { values }
                 />
             )
             default: return(

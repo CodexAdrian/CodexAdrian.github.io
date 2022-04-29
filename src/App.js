@@ -2,31 +2,30 @@ import earth from './globe.png';
 import regis from './Wordmark.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Pledge from "./components/Pledge";
+import MobilePledge from "./components/MobilePledge";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {red} from "@mui/material/colors";
 
 
 function App() {
+    const theme = createTheme({
+        palette: {
+            primary: {
+              main: '#d31145',
+            },
+        }
+    })
+
     if(window.innerHeight > window.innerWidth) {
         return(
-            <Pledge/>
+            <ThemeProvider theme={theme}>
+                <MobilePledge/>
+            </ThemeProvider>
         );
     } else {
         return(
             <div className="App">
-                <header className="regisHeader">
-                    <img src={regis} alt="regis logo" className="regisLogo"/>
-                </header>
-                <div className="appHeader">
-                    <div className="titleTextDiv">
-                        <div className="innerTextDiv">
-                            <p className="titleText">Pledge to the <strong>Cool-16 Pledge!</strong></p>
-                            <p>Pledging to the Cool 16 pledge web</p>
-                        </div>
-                    </div>
-                    <div className="earthDiv">
-                        <img src={earth} className="App-logo" alt="logo"/>
-                    </div>
-                </div>
+
             </div>
         );
     }

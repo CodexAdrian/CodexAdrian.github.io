@@ -80,6 +80,10 @@
   align-content: center;
 }
 
+.pageContents {
+  margin: 5%;
+}
+
 .innerTextDiv {
   text-align: left;
   margin: 10%;
@@ -112,6 +116,7 @@
 
 .subTitleText {
   font-size: 24px;
+  text-align: center;
 }
 
 .App-link {
