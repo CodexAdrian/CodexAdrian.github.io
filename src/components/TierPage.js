@@ -24,25 +24,31 @@ const TierPage = ({ prevStep, nextStep, handleChange, values}) => {
                 <TierCard
                     title={"Food"}
                     description={"If leftovers are inevitable, make a meal out of the leftovers!"}
-                    color={"#"}
+                    color={"#a31000"}
+                    textColor={"#FFFFFF"}
                 >
                     <NoFoodIcon sx={{fontSize: 70, padding: 1}}/>
                 </TierCard>
                 <TierCard
                     title={"Public Transportation"}
                     description={"Take the bus or the subway instead of driving at least twice a week."}
+                    color={"#006fa3"}
+                    textColor={"#FFFFFF"}
                 >
                     <DirectionsBusIcon sx={{fontSize: 70, padding: 1}}/>
                 </TierCard>
                 <TierCard
                     title={"Waste Management"}
                     description={"Pay may more attention to how you're recycling by throwing out waste correctly."}
+                    color={"#e89f00"}
                 >
                     <CachedIcon sx={{fontSize: 70, padding: 1}}/>
                 </TierCard>
                 <TierCard
                     title={"Energy Savings"}
                     description={"Turn off the lights when you exit a room to conserve energy"}
+                    color={"#006622"}
+                    textColor={"#FFFFFF"}
                 >
                     <EnergySavingsLeafIcon sx={{fontSize: 70, padding: 1}}/>
                 </TierCard>
