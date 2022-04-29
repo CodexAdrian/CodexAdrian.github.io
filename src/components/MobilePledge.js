@@ -48,7 +48,6 @@ export default class MobilePledge extends Component {
         switch (step) {
             case 1: return(
                 <MainPage
-                    prevStep = { this.prevStep }
                     nextStep = { this.nextStep }
                     handleChange = { this.handleChange }
                     values = { values }
