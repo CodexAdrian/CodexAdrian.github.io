@@ -1,7 +1,6 @@
 import earth from './globe.png';
 import regis from './Wordmark.png';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import MobilePledge from "./components/MobilePledge";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import {red} from "@mui/material/colors";

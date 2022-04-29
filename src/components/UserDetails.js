@@ -1,8 +1,5 @@
 import RegisHeader from "./RegisHeader";
-import {ProgressBar, Form} from "react-bootstrap";
-import {TextField} from "@material-ui/core";
-import {Fab, ThemeProvider, Zoom} from "@mui/material";
-import {Next} from "react-bootstrap/PageItem";
+import {Fab, LinearProgress, TextField, ThemeProvider, Zoom} from "@mui/material";
 
 const UserDetails = ({nextStep, handleChange, values}) => {
     const Continue = e => {
@@ -25,14 +22,13 @@ const UserDetails = ({nextStep, handleChange, values}) => {
             </style>
             <div>
                 <RegisHeader/>
-                <ProgressBar variant={"success"} now={25}></ProgressBar>
+                <LinearProgress variant="determinate" value={20}/>
                 <div className="pageContents">
                     <p className={"subTitleText"}>Personal Info</p>
                     <TextField id="filled-basic" label="First Name" variant="standard" fullWidth={true} className="textBox"/>
                     <TextField id="filled-basic" label="Last Name" variant="standard" fullWidth={true} className="textBox"/>
                     <TextField id="filled-basic" label="Email" variant="standard" fullWidth={true} className="textBox" />
                 </div>
-                <Fab color={"primary"} sx={sx} onClick={Continue}>></Fab>
             </div>
         </>
     )

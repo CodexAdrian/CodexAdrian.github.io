@@ -8,8 +8,8 @@ import {
     WhatsappIcon,
     WhatsappShareButton
 } from "react-share";
-import Button from 'react-bootstrap/Button';
 import RegisHeader from "./RegisHeader";
+import {Button} from "@mui/material";
 
 
 const MainPage = ({ prevStep, nextStep, handleChange, values}) => {
@@ -42,7 +42,7 @@ const MainPage = ({ prevStep, nextStep, handleChange, values}) => {
                 </div>
                 <div className="buttons">
 
-                    <Button variant="flat" onClick={Continue} size="lg">Take the Pledge</Button>
+                    <Button variant="contained" onClick={Continue} size="lg">Take the Pledge</Button>
                     <div className="shareButtons">
                         <TwitterShareButton className="shareButton" url={"https://regis.org"}><TwitterIcon size={48} round={true}/></TwitterShareButton>
                         <FacebookShareButton className="shareButton" url={"https://regis.org"}><FacebookIcon size={48} round={true}/></FacebookShareButton>
