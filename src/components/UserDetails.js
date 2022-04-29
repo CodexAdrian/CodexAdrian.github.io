@@ -1,5 +1,5 @@
 import RegisHeader from "./RegisHeader";
-import {Alert, Fab, LinearProgress, TextField, ThemeProvider, Zoom} from "@mui/material";
+import {Alert, Button, Fab, LinearProgress, TextField, ThemeProvider, Zoom} from "@mui/material";
 
 const UserDetails = ({nextStep, handleChange, values}) => {
     const Continue = e => {
@@ -22,16 +22,15 @@ const UserDetails = ({nextStep, handleChange, values}) => {
             </style>
             <div>
                 <RegisHeader/>
-                <LinearProgress variant="determinate" value={20}/>
+                <LinearProgress variant="determinate" value={16}/>
                 <div className="pageContents">
                     <p className={"subTitleText"}>Personal Info</p>
-                    <Alert severity={"error"}></Alert>
                     <TextField id="filled-basic" label="First Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('firstName')}/>
                     <TextField id="filled-basic" label="Last Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('lastName')}/>
                     <TextField id="filled-basic" label="Email" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('email')}/>
                     <TextField id="filled-basic" label="Country" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('country')}/>
                     <TextField id="filled-basic" label="Occupation" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('profession')}/>
-                    <Fab sx={sx} color={"primary"} onClick={Continue}/>
+                    <Button variant={"contained"} sx={{width:"min-content", whiteSpace:"nowrap", marginLeft: "auto", marginRight: "auto", marginTop:"auto"}} size={"large"} onClick={Continue}>Next</Button>
                 </div>
             </div>
         </>
