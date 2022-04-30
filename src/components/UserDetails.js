@@ -29,8 +29,8 @@ const UserDetails = ({nextStep, handleChange, values}) => {
                     <TextField id="firstName" label="First Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('firstName')} defaultValue={values.firstName} required={true}/>
                     <TextField id="lastName" label="Last Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('lastName')} defaultValue={values.lastName} required={true}/>
                     <TextField id="email" label="Email" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('email')} defaultValue={values.email} required={true}/>
-                    <TextField id="country" label="Country" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('country')} defaultValue={values.country} required={true}/>
-                    <TextField id="occupation" label="Occupation" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('occupation')} defaultValue={values.occupation} required={true}/>
+                    <TextField id="country" label="Country" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('country')} defaultValue={values.country} required={true} />
+                    <TextField id="occupation" label="Occupation" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('occupation')} defaultValue={values.occupation} />
                     <Button variant={"contained"} sx={{width:"min-content", whiteSpace:"nowrap", marginLeft: "auto", marginRight: "auto", marginTop:"auto"}} size={"large"} type={"submit"}>Next</Button>
                     </form>
                 </div>
