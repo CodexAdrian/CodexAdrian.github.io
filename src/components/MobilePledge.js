@@ -12,6 +12,7 @@ import {
 import MainPage from "./MainPage";
 import UserDetails from "./UserDetails";
 import TierPage from "./TierPage";
+import Confirmation from "./Confirmation";
 import FlashlightOffIcon from '@mui/icons-material/FlashlightOff';
 import PhonelinkOffIcon from '@mui/icons-material/PhonelinkOff';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
@@ -41,7 +42,7 @@ export default class MobilePledge extends Component {
         firstName: "",
         lastName: "",
         country: "",
-        profession: "",
+        occupation: "",
         pledgeLevel: 0,
     }
 
@@ -53,6 +54,10 @@ export default class MobilePledge extends Component {
     nextStep = () => {
         const {step} = this.state;
         this.setState({step: step + 1});
+    }
+
+    skipToEnd = () => {
+        this.setState({step: 8});
     }
 
     incrementPledgeLevel = () => {
@@ -67,8 +72,8 @@ export default class MobilePledge extends Component {
 
     render() {
         const {step} = this.state;
-        const {email, firstName, lastName, country, profession, pledgeLevel} = this.state;
-        const values = {email, firstName, lastName, country, profession, pledgeLevel};
+        const {email, firstName, lastName, country, occupation, pledgeLevel} = this.state;
+        const values = {email, firstName, lastName, country, occupation, pledgeLevel};
         const iconSx = {fontSize: 70, padding: 1};
 
         switch (step) {
@@ -117,6 +122,7 @@ export default class MobilePledge extends Component {
                         tier={2}
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
+                        skipToEnd={this.skipToEnd}
                         incrementPledgeLevel={this.incrementPledgeLevel}
                         progressBar={48}
                         wasteIcon={<FlatwareIcon sx={iconSx}/>}
@@ -140,6 +146,7 @@ export default class MobilePledge extends Component {
                         tier={3}
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
+                        skipToEnd={this.skipToEnd}
                         incrementPledgeLevel={this.incrementPledgeLevel}
                         progressBar={64}
                         wasteIcon={<CheckroomIcon sx={iconSx}/>}
@@ -163,6 +170,7 @@ export default class MobilePledge extends Component {
                         tier={4}
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
+                        skipToEnd={this.skipToEnd}
                         incrementPledgeLevel={this.incrementPledgeLevel}
                         progressBar={80}
                         wasteIcon={<SetMealIcon sx={iconSx}/>}
@@ -203,12 +211,20 @@ export default class MobilePledge extends Component {
                         hasNoThanks={true}
                     />
                 )
+            case 8:
+                return (
+                    <Confirmation
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        values={values}
+                    />
+                )
             default:
                 return (
                     <MainPage
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
-                        handleChange={this.handleChange}
+                        values={values}
                     />
                 )
         }

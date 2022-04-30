@@ -5,6 +5,7 @@ import TierCard from "./TierCard";
 const TierPage = ({
                       prevStep,
                       nextStep,
+                      skipToEnd,
                       incrementPledgeLevel,
                       progressBar,
                       tier,
@@ -31,6 +32,11 @@ const TierPage = ({
     const Revert = e => {
         e.preventDefault();
         prevStep();
+    }
+
+    const SkipToEnd = e => {
+        e.preventDefault();
+        skipToEnd();
     }
 
     return (
@@ -85,7 +91,7 @@ const TierPage = ({
                         whiteSpace: "nowrap",
                         marginRight: "auto",
                         marginTop: 1
-                    }} size={"large"} onClick={Continue}>No Thanks</Button>) : (<p style={{marginRight: "auto"}}></p>)}
+                    }} size={"large"} onClick={skipToEnd}>No Thanks</Button>) : (<p style={{marginRight: "auto"}}></p>)}
                 </div>
             </div>
         </div>

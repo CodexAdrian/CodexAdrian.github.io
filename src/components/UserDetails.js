@@ -25,12 +25,14 @@ const UserDetails = ({nextStep, handleChange, values}) => {
                 <LinearProgress variant="determinate" value={16}/>
                 <div className="pageContents">
                     <p className={"subTitleText"}>Personal Info</p>
-                    <TextField id="filled-basic" label="First Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('firstName')}/>
-                    <TextField id="filled-basic" label="Last Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('lastName')}/>
-                    <TextField id="filled-basic" label="Email" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('email')}/>
-                    <TextField id="filled-basic" label="Country" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('country')}/>
-                    <TextField id="filled-basic" label="Occupation" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('profession')}/>
-                    <Button variant={"contained"} sx={{width:"min-content", whiteSpace:"nowrap", marginLeft: "auto", marginRight: "auto", marginTop:"auto"}} size={"large"} onClick={Continue}>Next</Button>
+                    <form onSubmit={Continue}>
+                    <TextField id="firstName" label="First Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('firstName')} defaultValue={values.firstName} required={true}/>
+                    <TextField id="lastName" label="Last Name" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('lastName')} defaultValue={values.lastName} required={true}/>
+                    <TextField id="email" label="Email" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('email')} defaultValue={values.email} required={true}/>
+                    <TextField id="country" label="Country" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('country')} defaultValue={values.country} required={true}/>
+                    <TextField id="occupation" label="Occupation" variant="standard" fullWidth={true} className="textBox" onChange={handleChange('occupation')} defaultValue={values.occupation} required={true}/>
+                    <Button variant={"contained"} sx={{width:"min-content", whiteSpace:"nowrap", marginLeft: "auto", marginRight: "auto", marginTop:"auto"}} size={"large"} type={"submit"}>Next</Button>
+                    </form>
                 </div>
             </div>
         </>
